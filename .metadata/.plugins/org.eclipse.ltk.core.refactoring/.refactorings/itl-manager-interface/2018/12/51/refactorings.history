@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.zpx.itl.service&apos; to &apos;itl-manager-service/src/main/java/com.zpx.itl.impl&apos;&#x0D;&#x0A;- Original project: &apos;itl-manager-interface&apos;&#x0D;&#x0A;- Destination element: &apos;itl-manager-service/src/main/java/com.zpx.itl.impl&apos;&#x0D;&#x0A;- Original element: &apos;itl-manager-interface/src/main/java/com.zpx.itl.service&apos;" description="Copy package" destination="=itl-manager-service/src\/main\/java&lt;com.zpx.itl.impl" element1="/src\/main\/java&lt;com.zpx.itl.service" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1545216129998" version="1.0"/>
+</session>

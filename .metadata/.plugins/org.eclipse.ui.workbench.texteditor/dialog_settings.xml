@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.templates.TemplatePreferencePage$EditTemplateDialog_dialogBounds">
+		<item value="725" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="419" key="DIALOG_HEIGHT"/>
+		<item value="2" key="DIALOG_X_ORIGIN"/>
+		<item value="41" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="submitBtnClick" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="submitBtnClick"/>
+			<item value="e3-manager"/>
+			<item value="boot-crm"/>
+			<item value="select"/>
+			<item value="insertSelective"/>
+			<item value="Update_By_Example_Where_Clause"/>
+			<item value=".png"/>
+			<item value="right-header"/>
+			<item value=".jsp"/>
+			<item value=".html"/>
+			<item value="html"/>
+			<item value="&quot;wenzi-2&quot;"/>
+			<item value="X-UA-Compatible"/>
+			<item value="1.png"/>
+			<item value="${pageContext.request.contextPath}"/>
+		</list>
+		<list key="replacehistory">
+			<item value="itl-manager"/>
+			<item value=".jsp"/>
+			<item value=""/>
+			<item value="itl-web"/>
+			<item value="itl"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="356" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
+		<item value="1573" key="DIALOG_X_ORIGIN"/>
+		<item value="154" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

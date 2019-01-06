@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.zpx.itl.impl&apos; to &apos;com.zpx.itl.service.impl&apos;&#x0D;&#x0A;- Original project: &apos;itl-manager-service&apos;&#x0D;&#x0A;- Original element: &apos;itl-manager-service/src/main/java/com.zpx.itl.impl&apos;&#x0D;&#x0A;- Renamed element: &apos;itl-manager-service/src/main/java/com.zpx.itl.service.impl&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.zpx.itl.impl&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.zpx.itl.impl" name="com.zpx.itl.service.impl" qualified="false" references="true" stamp="1545216411437" textual="false" version="1.0"/>
+</session>
