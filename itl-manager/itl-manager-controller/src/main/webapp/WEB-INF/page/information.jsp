@@ -23,7 +23,14 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/css/source/style/information.css" />
 
-
+<!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!--Include all compiled plugins (below), or include individual files as needed-->
+<script
+	src="${pageContext.request.contextPath }/css/bootstrap/dist/js/bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath }/css/public/javascript/vue.js"></script>
+<!-- <script src="source/javascript/shenbao.js"></script> -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,12 +71,20 @@
 					<li><a href="/itl/department">部门介绍</a></li>
 					<li><a href="/itl/about">关于我们</a></li>
 					<li><a href="/itl/join">加入我们</a></li>
-					<li><a href="/itl/user/logout" onclick="logout" >退出</a></li>
+					<li><a id="logout" href="">退出</a></li>
 				</ul>
 				<script type="text/javascript">
-				function logout() {
-					alert("您确定退出吗");
-				}
+					//退出登录
+					$("#logout").click(function(){
+						if(confirm("你确定要退出吗？"))
+					    {
+					        location.href="/itl/user/logout";
+					    }
+					    else
+					    {
+					        alert("取消");
+					    }
+					});
 				</script>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -77,10 +92,9 @@
 		<!-- /.container-fluid --> </nav>
 	</div>
 
-
 	<div class="main">
 		<div class="title">
-			<h1>信息技术实验室内部信息管理系统</h1>
+			<h1>信息技术实验室信息管理系统</h1>
 			<form
 				action="${pageContext.request.contextPath }/FindByNameServlet?method=findByNameInfo"
 				method="post" name="Form">
@@ -178,10 +192,6 @@
 			</ul>
 		</center>
 	</div>
-
-
-
-
 	<div class="footer beijing">
 		<div class="footer-left">
 			<h3>联系方式：</h3>
@@ -203,19 +213,5 @@
 			<p>@安阳工学院信息技术实验室</p>
 		</div>
 	</div>
-
-
-
-	<!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
-	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-	<!--Include all compiled plugins (below), or include individual files as needed-->
-	<script
-		src="${pageContext.request.contextPath }/css/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath }/css/public/javascript/vue.js"></script>
-	<!-- <script src="source/javascript/shenbao.js"></script> -->
-
-
-
 </body>
 </html>

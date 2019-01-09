@@ -9,12 +9,17 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="submitBtnClick" key="selection"/>
+		<item value="hashCode" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="hashcode"/>
+			<item value="hashcde"/>
+			<item value="logout"/>
+			<item value="退出"/>
+			<item value="tuichua"/>
 			<item value="submitBtnClick"/>
 			<item value="e3-manager"/>
 			<item value="boot-crm"/>
@@ -25,11 +30,6 @@
 			<item value="right-header"/>
 			<item value=".jsp"/>
 			<item value=".html"/>
-			<item value="html"/>
-			<item value="&quot;wenzi-2&quot;"/>
-			<item value="X-UA-Compatible"/>
-			<item value="1.png"/>
-			<item value="${pageContext.request.contextPath}"/>
 		</list>
 		<list key="replacehistory">
 			<item value="itl-manager"/>
