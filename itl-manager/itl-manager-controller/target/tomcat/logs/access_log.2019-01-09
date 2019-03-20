@@ -1,7 +1,0 @@
-0:0:0:0:0:0:0:1 - - [09/Jan/2019:17:40:35 +0800] "GET /itl/user/login HTTP/1.1" 200 2463 http-bio-8080-exec-1 2112
-0:0:0:0:0:0:0:1 - - [09/Jan/2019:17:40:35 +0800] "POST /itl/user/login HTTP/1.1" 200 6778 http-bio-8080-exec-2 2125
-0:0:0:0:0:0:0:1 - - [09/Jan/2019:17:40:39 +0800] "GET /itl/user/login HTTP/1.1" 200 6778 http-bio-8080-exec-5 6
-0:0:0:0:0:0:0:1 - - [09/Jan/2019:17:40:43 +0800] "GET /itl/user/login HTTP/1.1" 200 2463 http-bio-8080-exec-7 5
-0:0:0:0:0:0:0:1 - - [09/Jan/2019:17:40:43 +0800] "POST /itl/user/logout HTTP/1.1" 200 11673 http-bio-8080-exec-6 226
-0:0:0:0:0:0:0:1 - - [09/Jan/2019:17:40:45 +0800] "GET /itl/index HTTP/1.1" 200 11673 http-bio-8080-exec-8 8
-0:0:0:0:0:0:0:1 - - [09/Jan/2019:17:40:48 +0800] "GET /itl/user/login HTTP/1.1" 200 2463 http-bio-8080-exec-10 2
