@@ -1,0 +1,13 @@
+package com.zpx.itl.service;
+
+import java.util.List;
+
+import com.zpx.itl.pojo.InfoList;
+import com.zpx.itl.pojo.PageBean;
+
+public interface InfoService {
+	
+	List<InfoList> findAll(int index, int count);
+	
+	//PageBean getCount();
+}

@@ -1,1 +1,3 @@
 com\zpx\itl\mapper\UserMapper.class
+com\zpx\itl\mapper\InfoMapper.class
+com\zpx\itl\mapper\ItemMapper.class

@@ -1,0 +1,12 @@
+package com.zpx.itl.mapper;
+
+import java.util.List;
+
+import com.zpx.itl.pojo.InfoList;
+import com.zpx.itl.pojo.PageBean;
+
+public interface InfoMapper {
+
+	List<InfoList> findAll(int pc, int ps);
+	PageBean getCount();
+}

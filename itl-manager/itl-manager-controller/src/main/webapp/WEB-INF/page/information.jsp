@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -74,14 +75,21 @@
 					<li><a href="" onclick="logout()">退出</a></li>
 				</ul>
 				<script type="text/javascript">
+				
+					/* function(){
+						$.ajax({
+							type : "POST",
+							url : "/itl/info/infoList",
+						});
+					}; */
+				
 					function logout() {
-						if(confirm("确定退出吗")){
+						if (confirm("确定退出吗")) {
 							$.ajax({
-							   type: "POST",
-							   url: "/itl/user/logout",
-							   }
-							);
-						}		
+								type : "POST",
+								url : "/itl/user/logout",
+							});
+						}
 					};
 				</script>
 			</div>
@@ -115,32 +123,30 @@
 		<div class="mingdan" id="box">
 			<table border='1'>
 				<tr>
+					<td>学号</td>
 					<td>姓名</td>
 					<td>性别</td>
-					<td>学号</td>
-					<td>专业班级</td>
+					<td>专业</td>
+					<td>部门</td>
 					<td>联系方式</td>
-					<td>想要加入的部门</td>
-					<c:if
+					<%-- <c:if
 						test="${user.username == '2bdb74e826e370869325a791639b9920' }">
 						<td>操作</td>
-					</c:if>
+					</c:if> --%>
 				</tr>
-				<c:forEach items="${pb.beanlist}" var="list">
+				<c:forEach items="${pageBean.beanlist}" var="list">
 					<tr>
-						<td><a
-							href="<c:url value='/FindByUid?method=query&uid=${list.uid}'/> ">
-								${list.name}</a></td>
-						<td>${list.sex}</td>
-						<td>${list.xh}</td>
-						<td>${list.zy}</td>
-						<td>${list.tel}</td>
-						<td>${list.bm}</td>
-						<c:if
+						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.snumber}</a></td>
+						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.name}</a></td>
+						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.sex}</a></td>
+						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.specialty}</a></td>
+						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.department}</a></td>
+						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.tel}</a></td>
+						<%-- <c:if
 							test="${user.username == '2bdb74e826e370869325a791639b9920' }">
 							<td><a class="red"
 								href="<c:url value='/FindByUid?method=delete&uid=${list.uid}'/>">删除</a></td>
-						</c:if>
+						</c:if> --%>
 					</tr>
 				</c:forEach>
 			</table>
@@ -148,45 +154,48 @@
 		</div>
 		<center>
 			<ul class="pagination">
-				<li><a style="color: black;">第${pb.pc}页</a> &nbsp;<a
-					style="color: black;">共${pb.tp}页</a></li>
-				<li><c:if test="${pb.pc>1}">
-						<a href="<c:url value='/FindAllServlet?pc=${pb.pc-1}'/> ">上一页</a>
+				<li><a style="color: black;">第${pageBean.currentPage}页</a>
+					&nbsp;<a style="color: black;">共${pageBean.totalPage}页</a></li>
+				<li><c:if test="${pageBean.currentPage > 1}">
+						<a
+							href="<c:url value='/info/infoList?currentPage=${pageBean.currentPage - 1}'/> ">上一页</a>
 					</c:if></li>
-				<li><a href="<c:url value='/FindAllServlet?pc=1'/> ">首页</a></li>
+				<li><a href="<c:url value='/info/infoList?currentPage=1'/> ">首页</a></li>
 
 				<li><c:choose>
-						<c:when test="${pb.tp<=5}">
+						<c:when test="${pageBean.totalPage <= 5}">
 							<c:set var="begin" value="1"></c:set>
-							<c:set var="end" value="${pb.tp}"></c:set>
+							<c:set var="end" value="${pageBean.totalPage}"></c:set>
 						</c:when>
 						<c:otherwise>
-							<c:set var="begin" value="${pb.pc-2}"></c:set>
-							<c:set var="end" value="${pb.pc+2}"></c:set>
-							<c:if test="${begin<1}">
+							<c:set var="begin" value="${pageBean.currentPage - 2}"></c:set>
+							<c:set var="end" value="${pageBean.currentPage + 2}"></c:set>
+							<c:if test="${begin < 1}">
 								<c:set var="begin" value="1"></c:set>
 								<c:set var="end" value="5"></c:set>
 							</c:if>
-							<c:if test="${end>pb.tp}">
-								<c:set var="begin" value="${pb.tp-4}"></c:set>
-								<c:set var="end" value="${pb.tp}"></c:set>
+							<c:if test="${end > pageBean.totalPage}">
+								<c:set var="begin" value="${pageBean.totalPage - 4}"></c:set>
+								<c:set var="end" value="${pageBean.totalPage}"></c:set>
 							</c:if>
 						</c:otherwise>
 					</c:choose></li>
 				<li><c:forEach var="i" begin="${begin}" end="${end}">
 						<c:choose>
-							<c:when test="${i eq pb.pc}">
+							<c:when test="${i eq pageBean.currentPage}">
 								<a style="color: black;">[${i}]</a>
 							</c:when>
 							<c:otherwise>
-								<a href="<c:url value='/FindAllServlet?pc=${i}'/> "> [${i}]</a>
+								<a href="<c:url value='/info/infoList?currentPage=${i}'/> "> [${i}]</a>
 							</c:otherwise>
 						</c:choose>
 					</c:forEach></li>
-				<li><c:if test="${pb.pc<pb.tp}">
-						<a href="<c:url value='/FindAllServlet?pc=${pb.pc+1}'/> ">下一页</a>
+				<li><c:if test="${pageBean.currentPage < pageBean.totalPage}">
+						<a
+							href="<c:url value='/info/infoList?currentPage=${pageBean.currentPage + 1}'/> ">下一页</a>
 					</c:if></li>
-				<li><a href="<c:url value='/FindAllServlet?pc=${pb.tp}'/> ">尾页</a></li>
+				<li><a
+					href="<c:url value='/info/infoList?currentPage=${pageBean.totalPage}'/> ">尾页</a></li>
 			</ul>
 		</center>
 	</div>

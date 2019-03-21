@@ -1,8 +1,10 @@
 package com.zpx.itl.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -25,8 +27,6 @@ public class UserLoginController {
 	@Autowired
 	private UserService userService;
 	
-	private Map<Object, Object> ma = new HashMap<>();
-	
 	/**
 	 * 登录
 	 * @param username
@@ -34,9 +34,11 @@ public class UserLoginController {
 	 * @param request
 	 * @param response
 	 * @return
+	 * @throws IOException 
+	 * @throws ServletException 
 	 */
 	@RequestMapping("/user/login")
-	public String userLogin(String username, String password, HttpServletRequest request, HttpServletResponse response) {
+	public String userLogin(String username, String password, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		HttpSession session = request.getSession();
 		User suser = (User) session.getAttribute("user");
@@ -46,7 +48,12 @@ public class UserLoginController {
 			User user = userService.userLogin(username, password);
 			if(user != null && !"".equals(user + "")) {
 				session.setAttribute("user", user);
-				return "information";
+				//登录成功，转发至信息列表页面
+				//request.getRequestDispatcher("/item/infoList").forward(request, response);
+				//重定向
+				response.sendRedirect("/itl/info/infoList?currentPage=1");
+				//"/item/infoList";
+				//return "information";
 			}
 			session.setAttribute("error", "用户名或密码错误");
 			return "login";

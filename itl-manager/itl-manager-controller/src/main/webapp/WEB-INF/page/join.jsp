@@ -59,7 +59,7 @@
 						<li><a href="/itl/index">首页</a></li>
 						<li><a href="/itl/department">部门介绍</a></li>
 						<li><a href="/itl/about">关于我们</a></li>
-						<li><a href="/itl/join">加入我们</a></li>
+						<li><a href="/itl/item/getItem">加入我们</a></li>
 						<li><a href="/itl/user/login">后台管理</a></li>
 
 					</ul>
@@ -79,70 +79,78 @@
 				<p>请认真填写以下报告内容，确保信息真实有效。</p>
 			</div>
 
-			<ul class="ul-xinxi form-group">
-				<li class="fl">
-					<p class="fs19">姓名：</p> <input id="name" type="text" name="#"
-					value="" class="form-control" />
-					<p class="jinggao"></p>
-				</li>
-				<li class="fr">
-					<p class="fs19">性别：</p> <select id="sex" class="form-control"
-					required>
-						<option selected="selected" value="" disabled>---请选择---</option>
-						<option value="男">男</option>
-						<option value="女">女</option>
-				</select>
-
-
-					<p class="jinggao"></p>
-				</li>
-				<li class="fl cb">
-					<p class="fs19">专业班级：</p> <select id="zy" class="form-control"
-					required>
-						<option selected="selected" value="" disabled>---请选择---</option>
-						<option value="17级计算机科学与技术">17级计算机科学与技术</option>
-						<option value="17级网络工程">17级网络工程</option>
-						<option value="17级物联网工程">17级物联网工程</option>
-						<option value="17级软件工程">17级软件工程</option>
-						<option value="17级软件技术">17级软件技术</option>
-						<option value="17级计算机应用技术">17级计算机应用技术</option>
-						<option value="18级计科（专）">18级（专升本）</option>
-				</select>
-					<p class="jinggao"></p>
-				</li>
-				<li class="fr">
-					<p class="fs19">想要加入的部门：</p> <select id="bm" class="form-control"
-					required>
-						<option selected="selected" value="" disabled>---请选择---</option>
-						<option value="前端部">前端部</option>
-						<option value="后端部">后端部</option>
-						<option value="设计部">设计部</option>
-						<option value="数据库部">数据库部</option>
-				</select>
-					<p class="jinggao"></p>
-				</li>
-				<li class="fl cb">
-					<p class="fs19">学号</p> <input id="xh" type="text" name="#" value=""
-					class="form-control" />
-					<p class="jinggao"></p>
-				</li>
-				<li class="fr">
-					<p class="fs19">tel（请确保填写正确）</p> <input id="tel" type="text"
-					name="#" value="" class="form-control" />
-					<p class="jinggao"></p>
-				</li>
-				<li class="fl cb">
-					<p class="fs19">专业技能</p> <textarea id="jn" class="form-control"
-						required></textarea>
-					<p class="jinggao">500字以内</p>
-				</li>
-				<li class="fl cb">
-					<p class="fs19">自我能力描述</p> <textarea id="nl" class="form-control"
-						required></textarea>
-					<p class="jinggao">500字以内</p>
-				</li>
-			</ul>
-
+			<script>
+				/* $.ajax({
+					  type: "GET",
+					  url: "/itl/item/getItem",
+					  dataType: "script"
+				}); */
+			</script>
+				
+				
+					<ul class="ul-xinxi form-group">
+						<li class="fl">
+							<p class="fs19">姓名：</p> <input id="name" type="text" name="#"
+							value="" class="form-control" />
+							<p class="jinggao"></p>
+						</li>
+						<li class="fr">
+							<p class="fs19">性别：</p> <select id="sex" class="form-control"
+							required>
+								<option selected="selected" value="" disabled>---请选择---</option>
+								<option value="男">男</option>
+								<option value="女">女</option>
+						</select>
+		
+		
+							<p class="jinggao"></p>
+						</li>
+						<li class="fl cb">
+							<p class="fs19">专业班级：</p> <select id="zy" class="form-control" required>
+							
+								<option selected="selected" value="" disabled>---请选择---</option>
+								<option value="17级计算机科学与技术">17级计算机科学与技术</option>
+								<option value="17级网络工程">17级网络工程</option>
+								<option value="17级物联网工程">17级物联网工程</option>
+								<option value="17级软件工程">17级软件工程</option>
+								<option value="17级软件技术">17级软件技术</option>
+								<option value="17级计算机应用技术">17级计算机应用技术</option>
+								<option value="18级计科（专升本）">18级（专升本）</option>
+						</select>
+							<p class="jinggao"></p>
+						</li>
+						<li class="fr">
+							<p class="fs19">想要加入的部门：</p> <select id="bm" class="form-control"
+							required>
+								<option selected="selected" value="" disabled>---请选择---</option>
+								<option value="前端部">前端部</option>
+								<option value="后端部">后端部</option>
+								<option value="设计部">设计部</option>
+								<option value="数据库部">数据库部</option>
+						</select>
+							<p class="jinggao"></p>
+						</li>
+						<li class="fl cb">
+							<p class="fs19">学号</p> <input id="xh" type="text" name="#" value=""
+							class="form-control" />
+							<p class="jinggao"></p>
+						</li>
+						<li class="fr">
+							<p class="fs19">tel（请确保填写正确）</p> <input id="tel" type="text"
+							name="#" value="" class="form-control" />
+							<p class="jinggao"></p>
+						</li>
+						<li class="fl cb">
+							<p class="fs19">专业技能</p> <textarea id="jn" class="form-control"
+								required></textarea>
+							<p class="jinggao">500字以内</p>
+						</li>
+						<li class="fl cb">
+							<p class="fs19">自我能力描述</p> <textarea id="nl" class="form-control"
+								required></textarea>
+							<p class="jinggao">500字以内</p>
+						</li>
+					</ul>
 			<div class="tijiao" id="tijiao">提交</div>
 			<!--注意事项-->
 			<div class="zhuyishixiang">

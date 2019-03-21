@@ -1,0 +1,14 @@
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:36:40 +0800] "GET /itl/info/infoList?currentPage=1 HTTP/1.1" 200 11673 http-bio-8080-exec-2 1575
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:36:41 +0800] "GET /itl/user/login HTTP/1.1" 200 2463 http-bio-8080-exec-3 300
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:36:49 +0800] "POST /itl/user/login HTTP/1.1" 302 - http-bio-8080-exec-4 440
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:36:49 +0800] "GET /itl/info/infoList?currentPage=1 HTTP/1.1" 200 12380 http-bio-8080-exec-6 567
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:36:51 +0800] "GET /itl/info/findByUid?uid=1FA348C493B54BE2819C34AE4B94BEF4 HTTP/1.1" 200 2950 http-bio-8080-exec-7 99
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:36:51 +0800] "GET /itl/css/public/images/0.2.png HTTP/1.1" 200 4414 http-bio-8080-exec-8 79
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:36:55 +0800] "GET /itl/info/infoList HTTP/1.1" 500 4215 http-bio-8080-exec-9 15
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:37:45 +0800] "GET /itl/info/findByUid?uid=1FA348C493B54BE2819C34AE4B94BEF4 HTTP/1.1" 200 2968 http-bio-8080-exec-2 98
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:37:47 +0800] "GET /itl/itl/info/infoList?currentPage=1 HTTP/1.1" 404 949 http-bio-8080-exec-2 3
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:37:57 +0800] "GET /itl/info/findByUid?uid=1FA348C493B54BE2819C34AE4B94BEF4 HTTP/1.1" 200 2964 http-bio-8080-exec-2 90
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:38:01 +0800] "GET /itl/info/infoList?currentPage=1 HTTP/1.1" 200 12380 http-bio-8080-exec-2 20
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:38:03 +0800] "GET /itl/info/findByUid?uid=1FA348C493B54BE2819C34AE4B94BEF4 HTTP/1.1" 200 2964 http-bio-8080-exec-2 8
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:38:04 +0800] "GET /itl/info/infoList?currentPage=1 HTTP/1.1" 200 12380 http-bio-8080-exec-2 15
+0:0:0:0:0:0:0:1 - - [21/Mar/2019:21:38:05 +0800] "GET /itl/info/findByUid?uid=920BCAEAAABD4407B90B2A2EBC5D2B08 HTTP/1.1" 200 4342 http-bio-8080-exec-2 8

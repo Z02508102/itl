@@ -1,0 +1,36 @@
+package com.zpx.itl.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
+
+import com.zpx.itl.mapper.InfoMapper;
+import com.zpx.itl.mapper.UserMapper;
+import com.zpx.itl.pojo.InfoList;
+import com.zpx.itl.pojo.PageBean;
+import com.zpx.itl.pojo.User;
+import com.zpx.itl.service.InfoService;
+import com.zpx.itl.service.UserService;
+
+
+@Service
+public class InfoServiceImpl implements InfoService {
+
+	@Autowired
+	private InfoMapper infoMapper;
+	
+	@Override
+	public List<InfoList> findAll(int index, int count) {
+		List<InfoList> list = infoMapper.findAll(index, count);
+		return list;
+	}
+
+	/*@Override
+	public PageBean getCount() {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
+}

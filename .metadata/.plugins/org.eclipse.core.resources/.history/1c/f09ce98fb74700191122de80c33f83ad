@@ -1,0 +1,8 @@
+package com.zpx.itl.mapper;
+
+import com.zpx.itl.pojo.Item;
+
+public interface ItemMapper {
+
+	Item getItem();
+}

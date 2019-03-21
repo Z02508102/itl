@@ -1,0 +1,15 @@
+package com.zpx.itl.service;
+
+import java.util.List;
+
+import com.zpx.itl.pojo.InfoList;
+import com.zpx.itl.pojo.PageBean;
+
+public interface InfoService {
+	
+	//查询所有数据
+	PageBean<InfoList> findAll(int papgeSize, int currentPage);
+	
+	//获取总记录数
+	//int getTotal();
+}

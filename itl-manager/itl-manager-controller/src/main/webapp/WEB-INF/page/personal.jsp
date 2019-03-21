@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -123,45 +124,43 @@ body {
 				<h2>详细信息</h2>
 			</div>
 			<a id="back"
-				href="${pageContext.request.contextPath }/FindAllServlet">返回</a>
+				href="${pageContext.request.contextPath }/info/infoList?currentPage=1">返回</a>
 			<ul>
 				<li class="fl">
 					<p class="fs19">姓名：</p>
-					<div class="xinxi-data">${person.name}</div>
-
-
+					<div class="xinxi-data">${info.name}</div>
 				</li>
 				<li class="fr">
 					<p class="fs19">性别：</p>
-					<div class="xinxi-data">${person.sex}</div>
+					<div class="xinxi-data">${info.sex}</div>
 				</li>
 				<li class="fl cb">
-					<p class="fs19">专业班级：</p>
-					<div class="xinxi-data">${person.zy}</div>
+					<p class="fs19">专业：</p>
+					<div class="xinxi-data">${info.specialty}</div>
 
 				</li>
 				<li class="fr">
 					<p class="fs19">想要加入的部门：</p>
-					<div class="xinxi-data">${person.bm}</div>
+					<div class="xinxi-data">${info.department}</div>
 
 				</li>
 				<li class="fl cb">
 					<p class="fs19">学号：</p>
-					<div class="xinxi-data">${person.xh}</div>
+					<div class="xinxi-data">${info.snumber}</div>
 
 				</li>
 				<li class="fr">
 					<p class="fs19">tel：</p>
-					<div class="xinxi-data">${person.tel}</div>
+					<div class="xinxi-data">${info.tel}</div>
 
 				</li>
 				<li class="fl cb">
-					<p class="fs19">专业技能：</p> <textarea class="textarea-data">${person.jn}</textarea>
+					<p class="fs19">专业技能：</p> <textarea class="textarea-data">${info.skill}</textarea>
 
 
 				</li>
 				<li class="fl cb">
-					<p class="fs19">自我能力描述：</p> <textarea class="textarea-data">${person.nl}</textarea>
+					<p class="fs19">自我能力描述：</p> <textarea class="textarea-data">${info.describe}</textarea>
 
 				</li>
 

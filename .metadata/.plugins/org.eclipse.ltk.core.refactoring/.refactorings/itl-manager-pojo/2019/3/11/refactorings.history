@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.zpx.itl.pojo.Laboratory&apos; to &apos;InfoList&apos;&#x0D;&#x0A;- Original project: &apos;itl-manager-pojo&apos;&#x0D;&#x0A;- Original element: &apos;com.zpx.itl.pojo.Laboratory&apos;&#x0D;&#x0A;- Renamed element: &apos;com.zpx.itl.pojo.InfoList&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Laboratory&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.zpx.itl.pojo{Laboratory.java[Laboratory" matchStrategy="1" name="InfoList" qualified="false" references="true" similarDeclarations="false" stamp="1552722670123" textual="false" version="1.0"/>
+</session>
