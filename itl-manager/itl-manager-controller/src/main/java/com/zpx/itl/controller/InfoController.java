@@ -52,6 +52,7 @@ public class InfoController {
 		return "index";
 	}
 	
+	//根据uid查询详细信息
 	@RequestMapping("/info/findByUid")
 	public String findByUid(String uid, HttpServletRequest request, HttpServletResponse response) {
 		
@@ -62,6 +63,19 @@ public class InfoController {
 			return "personal";
 		}
 		//session中有数据，从session中取数据即可
+		return "information";
+	}
+	
+	//根据姓名进行模糊查询
+	@RequestMapping("/info/findByName")
+	public String findByName(String sname, String currentPage, HttpServletRequest request, HttpServletResponse response) {
+		
+		HttpSession session = request.getSession();
+		
+		//每页显示几条数据
+		int pageSize = 10;
+		PageBean pageBean = infoService.findByName(sname, pageSize, currentPage);
+		session.setAttribute("pageBean", pageBean);
 		return "information";
 	}
 	

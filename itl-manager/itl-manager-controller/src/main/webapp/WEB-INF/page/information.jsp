@@ -102,7 +102,7 @@
 		<div class="title">
 			<h1>信息技术实验室信息管理系统</h1>
 			<form
-				action="${pageContext.request.contextPath }/FindByNameServlet?method=findByNameInfo"
+				action="${pageContext.request.contextPath }/info/findByName?currentPage=1"
 				method="post" name="Form">
 				<div class="input-group" id="find">
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zpx.itl.mapper.InfoMapper">
+	<resultMap id="BaseResultMap"
+		type="com.zpx.itl.pojo.Information">
+		<id column="name" property="name" jdbcType="VARCHAR" />
+		<id column="sex" property="sex" jdbcType="VARCHAR" />
+		<id column="zy" property="zy" jdbcType="VARCHAR" />
+		<id column="bm" property="bm" jdbcType="VARCHAR" />
+		<id column="xh" property="xh" jdbcType="VARCHAR" />
+		<id column="tel" property="tel" jdbcType="VARCHAR" />
+		<id column="jn" property="jn" jdbcType="VARCHAR" />
+		<id column="nl" property="nl" jdbcType="VARCHAR" />
+		<id column="uid" property="uid" jdbcType="VARCHAR" />
+
+	</resultMap>
+
+	<!-- 查询总记录数 -->
+	<select id="getTotal" resultType="int">
+		SELECT
+			count( * ) 
+		FROM
+			itl_info;
+	</select>
+
+	<!-- 查询所有数据 -->
+	<select id="findAll" parameterType="int" resultType="com.zpx.itl.pojo.Information">
+		SELECT
+			* 
+		FROM
+			itl_info 
+		ORDER BY
+		NAME 
+			LIMIT #{0}, #{1};
+	</select>
+	
+	<!-- 根据学号查询详细信息 -->
+	<select id="findByUid" parameterType="java.lang.String" resultType="com.zpx.itl.pojo.Information" >
+		SELECT
+			* 
+		FROM
+			itl_info 
+		WHERE
+			uid = #{0};
+	</select>
+	
+	<!-- 根据姓名进行模糊查询 -->
+	<select id="findByName" parameterType="java.lang.String" resultType="com.zpx.itl.pojo.Information" >
+		SELECT
+			* 
+		FROM
+			itl_info 
+		WHERE
+			NAME LIKE '%' #{0} '%' 
+			LIMIT #{1}, #{2};
+	</select>
+
+
+</mapper>

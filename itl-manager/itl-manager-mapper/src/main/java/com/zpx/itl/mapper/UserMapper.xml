@@ -18,7 +18,6 @@
 		itl_user 
 	WHERE
 		username = #{0}
-		
 		AND password = #{1};
   </select>
   

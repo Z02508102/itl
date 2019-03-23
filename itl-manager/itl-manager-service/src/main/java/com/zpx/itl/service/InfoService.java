@@ -1,7 +1,5 @@
 package com.zpx.itl.service;
 
-import java.util.List;
-
 import com.zpx.itl.pojo.Information;
 import com.zpx.itl.pojo.PageBean;
 
@@ -12,4 +10,7 @@ public interface InfoService {
 	
 	//根据uid查询详细信息
 	Information findByUid(String uid);
+	
+	//根据姓名进行模糊查询
+	PageBean<Information> findByName(String sname, int pageSize, String currentPage);
 }

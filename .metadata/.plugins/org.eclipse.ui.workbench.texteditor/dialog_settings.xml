@@ -9,12 +9,16 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="currentPage" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="搜索"/>
+			<item value="submitBtnClick"/>
+			<item value="item"/>
+			<item value="首页"/>
 			<item value="pc"/>
 			<item value="tp"/>
 			<item value="ps"/>
@@ -26,12 +30,9 @@
 			<item value="hashcode"/>
 			<item value="hashcde"/>
 			<item value="logout"/>
-			<item value="退出"/>
-			<item value="tuichua"/>
-			<item value="submitBtnClick"/>
-			<item value="e3-manager"/>
 		</list>
 		<list key="replacehistory">
+			<item value="info"/>
 			<item value="currentPage"/>
 			<item value="totalPage"/>
 			<item value="pageSize"/>
