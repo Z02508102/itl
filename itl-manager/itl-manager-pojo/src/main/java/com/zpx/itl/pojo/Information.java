@@ -1,5 +1,7 @@
 package com.zpx.itl.pojo;
 
+import java.util.List;
+
 /**
  * 
  * @author ZPX
@@ -17,6 +19,7 @@ public class Information {
 	private String skill; //专业技能描述
 	private String describes; //自我能力描述
 	private String uid;
+	
 	public String getSnumber() {
 		return snumber;
 	}
@@ -62,8 +65,8 @@ public class Information {
 	public String getDescribes() {
 		return describes;
 	}
-	public void setDescribe(String describe) {
-		this.describes = describe;
+	public void setDescribes(String describes) {
+		this.describes = describes;
 	}
 	public String getUid() {
 		return uid;
@@ -71,12 +74,12 @@ public class Information {
 	public void setUid(String uid) {
 		this.uid = uid;
 	}
+
 	@Override
 	public String toString() {
 		return "InfoList [snumber=" + snumber + ", name=" + name + ", sex=" + sex + ", specialty=" + specialty
 				+ ", department=" + department + ", tel=" + tel + ", skill=" + skill + ", describes=" + describes
 				+ ", uid=" + uid + "]";
 	}
-
 	
 }

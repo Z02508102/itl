@@ -1,13 +1,13 @@
 window.onload = function() {
 	var tijiao = document.getElementById("tijiao");
-	var name = document.getElementById("snumber");
-	var sex = document.getElementById("name");
-	var zy = document.getElementById("sex");
-	var bm = document.getElementById("specialty");
-	var xh = document.getElementById("department");
+	var name = document.getElementById("name");
+	var sex = document.getElementById("sex");
+	var specialty = document.getElementById("specialty");
+	var department = document.getElementById("department");
+	var snumber = document.getElementById("snumber");
 	var tel = document.getElementById("tel");
-	var jn = document.getElementById("skill");
-	var nl = document.getElementById("describe");
+	var skill = document.getElementById("skill");
+	var describes = document.getElementById("describes");
 	var name_length = 0;
 	var jinggao = document.getElementsByClassName('jinggao');
 
@@ -69,15 +69,15 @@ window.onload = function() {
 	}
 	//	专业班级验证
 
-	zy.onkeyup = function() {
+	specialty.onkeyup = function() {
 		name_length = getLength(this.value)
 	};
-	 zy.onclick=function()
+	 specialty.onclick=function()
 	   {
 		   if(this.value=="")
 			  name_length=0; 
 	   }
-	zy.onblur = function() {
+	specialty.onblur = function() {
 		var regex2 = new RegExp(/^\d\d级[\u4e00-\u9fa5]+/, "g")
 		var istrue = regex2.test(this.value);
 		if (istrue) {
@@ -93,15 +93,15 @@ window.onload = function() {
 	}
 	//	加入部门验证
 
-	bm.onkeyup = function() {
+	department.onkeyup = function() {
 		name_length = getLength(this.value)
 	};
-	 bm.onclick=function()
+	 department.onclick=function()
 	   {
 		   if(this.value=="")
 			  name_length=0; 
 	   }
-	bm.onblur = function() {
+	department.onblur = function() {
 		var regex3 = new RegExp(/^[\u4e00-\u9fa5]+/, "g")
 		var istrue = regex3.test(this.value);
 		if (istrue) {
@@ -112,15 +112,15 @@ window.onload = function() {
 
 	}
 	//学号验证		
-	xh.onkeyup = function() {
+	snumber.onkeyup = function() {
 		name_length = getLength(this.value)
 	};
-	 xh.onclick=function()
+	 snumber.onclick=function()
 	   {
 		   if(this.value=="")
 			  name_length=0; 
 	   }
-	xh.onblur = function() {
+	snumber.onblur = function() {
 		var regex4 = new RegExp(/^[0-9]{11}/, "g");
 		var istrue = regex4.test(this.value);
 		if (istrue && name_length == 11) {
@@ -155,15 +155,15 @@ window.onload = function() {
 
 	}
 	//专业技能验证
-	jn.onkeyup = function() {
+	skill.onkeyup = function() {
 		name_length = getLength(this.value)
 	};
-	 jn.onclick=function()
+	 skill.onclick=function()
 	   {
 		   if(this.value=="")
 			  name_length=0; 
 	   }
-	jn.onblur = function() {
+	skill.onblur = function() {
 		var regex6 = new RegExp(/\S/, "g")
 		var istrue = regex6.test(this.value);
 		if (name_length <= 1000 && istrue) {
@@ -173,15 +173,15 @@ window.onload = function() {
 		}
 	}
 	//自我能力验证
-	nl.onkeyup = function() {
+	describes.onkeyup = function() {
 		name_length = getLength(this.value)
 	};
-	 nl.onclick=function()
+	 describes.onclick=function()
 	   {
 		   if(this.value=="")
 			  name_length=0; 
 	   }
-	nl.onblur = function() {
+	describes.onblur = function() {
 		var regex7 = new RegExp(/\S/, "g")
 		var istrue = regex7.test(this.value);
 		if (name_length <= 1000 && istrue) {
@@ -193,21 +193,21 @@ window.onload = function() {
 	}
 
 	tijiao.onclick = function() {
-		if (name.value == "" || sex.value == "" || zy.value == ""
-				|| bm.value == "" || xh.value == "" || tel.value == ""
-				|| jn.value == "" || nl.value == "") {
+		if (name.value == "" || sex.value == "" || specialty.value == ""
+				|| department.value == "" || snumber.value == "" || tel.value == ""
+				|| skill.value == "" || describes.value == "") {
 			alert("提交失败 ，请检查信息是否填写完整!");
 			return;
 		}
 
 		var urlshuju = "name=" + document.getElementById("name").value
-				+ "&sex=" + document.getElementById("sex").value + "&zy="
-				+ document.getElementById("zy").value + "&bm="
-				+ document.getElementById("bm").value + "&xh="
-				+ document.getElementById("xh").value + "&tel="
-				+ document.getElementById("tel").value + "&jn="
-				+ document.getElementById("jn").value + "&nl="
-				+ document.getElementById("nl").value;
+				+ "&sex=" + document.getElementById("sex").value + "&specialty="
+				+ document.getElementById("specialty").value + "&department="
+				+ document.getElementById("department").value + "&snumber="
+				+ document.getElementById("snumber").value + "&tel="
+				+ document.getElementById("tel").value + "&skill="
+				+ document.getElementById("skill").value + "&describes="
+				+ document.getElementById("describes").value;
 		//	alert(urlshuju);
 		var request = new XMLHttpRequest();
 		request.onreadystatechange = function() {
@@ -216,7 +216,7 @@ window.onload = function() {
 						|| request.status == 304) {
 					if (request.responseText == "注册信息成功！") {
 						alert(request.responseText);
-						document.location = 'index.html';
+						document.location = 'index.jsp';
 					} else {
 						alert(request.responseText);
 					}

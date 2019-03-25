@@ -5,6 +5,9 @@ import com.zpx.itl.pojo.PageBean;
 
 public interface InfoService {
 	
+	//添加信息
+	int addInfo(Information information);
+	
 	//查询所有数据
 	PageBean<Information> findAll(int papgeSize, int currentPage);
 	

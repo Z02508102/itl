@@ -19,6 +19,13 @@ public class InfoServiceImpl implements InfoService {
 	private InfoMapper infoMapper;
 	private Param param = new Param();
 	
+	//添加信息
+	public int addInfo(Information information) {
+		
+		return infoMapper.addInfo(information);
+		
+	}
+	
 	//查询所有数据
 	public PageBean<Information> findAll(int pageSize, int currentPage) {
 		

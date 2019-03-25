@@ -7,21 +7,9 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="itl-manager-controller"/>
+			<item value="itl-manager-pojo"/>
 			<item value="itl-manager"/>
 			<item value="itl-manager-mapper"/>
-			<item value="itl-manager-web"/>
-			<item value="itl-manager-service"/>
-			<item value="itl-manager-interface"/>
-			<item value="itl-manager-dao"/>
-			<item value="itl-manager-pojo"/>
-			<item value="itl-web"/>
-			<item value="itl-service"/>
-			<item value="itl-interface"/>
-			<item value="itl-dao"/>
-			<item value="itl-pojo"/>
-			<item value="itl-parent"/>
-			<item value="itl-common"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -47,6 +35,31 @@
 		<list key="issueManagementUrl">
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.MavenProjectSelectionDialog">
+		<item value="480" key="width"/>
+		<item value="807" key="x"/>
+		<item value="216" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="720" key="x"/>
+		<item value="0" key="y"/>
+		<item value="667" key="height"/>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="G:\Java\Workspace\itl\itl-manager\itl-manager-pojo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -60,13 +73,13 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="itl-manager-pojo"/>
 			<item value="itl-manager-controller"/>
 			<item value="itl-manager-mapper"/>
 			<item value="itl-manager-web"/>
 			<item value="itl-manager-service"/>
 			<item value="itl-manager-interface"/>
 			<item value="itl-manager-dao"/>
-			<item value="itl-manager-pojo"/>
 			<item value="itl-web"/>
 			<item value="itl-service"/>
 			<item value="itl-interface"/>
@@ -84,9 +97,18 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+	<section name="MavenDependenciesWizardPage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="G:\Java\Workspace\itl\itl-parent"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -99,13 +121,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.itl.manager.controller"/>
+			<item value="org.itl.manager.pojo"/>
 		</list>
 		<list key="groupId">
 			<item value="com.zpx.itl"/>
 		</list>
 		<list key="artifactId">
-			<item value="itl-manager-controller"/>
+			<item value="itl-manager-pojo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

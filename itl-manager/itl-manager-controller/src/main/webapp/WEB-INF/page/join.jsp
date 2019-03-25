@@ -112,7 +112,7 @@
 							
 								<option selected="selected" value="" disabled>---请选择---</option>
 								<c:forEach items="${itemList}" var="list">
-									<option value="'+ ${list.specialty} } +'">${list.specialty}</option>
+									<option value="${list.specialty}">${list.specialty}</option>
 								</c:forEach>
 						</select>
 							<p class="jinggao"></p>
@@ -143,7 +143,7 @@
 							<p class="jinggao">500字以内</p>
 						</li>
 						<li class="fl cb">
-							<p class="fs19">自我能力描述</p> <textarea id="describe" class="form-control"
+							<p class="fs19">自我能力描述</p> <textarea id="describes" class="form-control"
 								required></textarea>
 							<p class="jinggao">500字以内</p>
 						</li>
