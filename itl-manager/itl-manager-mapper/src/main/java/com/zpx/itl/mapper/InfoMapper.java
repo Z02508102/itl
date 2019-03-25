@@ -7,6 +7,9 @@ import com.zpx.itl.pojo.Param;
 
 public interface InfoMapper {
 
+	//添加信息
+	int addInfo(Information information);
+	
 	//查询所有数据
 	List<Information> findAll(int index, int count);
 	

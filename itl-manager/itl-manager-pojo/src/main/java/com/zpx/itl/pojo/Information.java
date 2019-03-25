@@ -15,7 +15,7 @@ public class Information {
 	private String department; //部门
 	private String tel; //手机号
 	private String skill; //专业技能描述
-	private String describe; //自我能力描述
+	private String describes; //自我能力描述
 	private String uid;
 	public String getSnumber() {
 		return snumber;
@@ -59,11 +59,11 @@ public class Information {
 	public void setSkill(String skill) {
 		this.skill = skill;
 	}
-	public String getDescribe() {
-		return describe;
+	public String getDescribes() {
+		return describes;
 	}
 	public void setDescribe(String describe) {
-		this.describe = describe;
+		this.describes = describe;
 	}
 	public String getUid() {
 		return uid;
@@ -74,7 +74,7 @@ public class Information {
 	@Override
 	public String toString() {
 		return "InfoList [snumber=" + snumber + ", name=" + name + ", sex=" + sex + ", specialty=" + specialty
-				+ ", department=" + department + ", tel=" + tel + ", skill=" + skill + ", describe=" + describe
+				+ ", department=" + department + ", tel=" + tel + ", skill=" + skill + ", describes=" + describes
 				+ ", uid=" + uid + "]";
 	}
 

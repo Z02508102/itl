@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -28,12 +29,23 @@
 	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	  <![endif]-->
 </head>
-
+<script src="${pageContext.request.contextPath}/js/jquery/dist/jquery.min.js"></script>
 <body>
 	<div class="huidaodingbu">
 		<a href="#"><img
 			src="${pageContext.request.contextPath }/css/public/images/0.1.png" /></a>
 	</div>
+	
+	<script type="text/javascript">
+	
+		$(function (){
+			 $.ajax({
+				type : "POST",
+				url : "/itl/item/getItem",
+			});
+		});
+	
+	</script>
 	<div class="header">
 		<nav class="navbar navbar-default beijing ">
 			<div class="container-fluid">
@@ -78,16 +90,6 @@
 				</div>
 				<p>请认真填写以下报告内容，确保信息真实有效。</p>
 			</div>
-
-			<script>
-				/* $.ajax({
-					  type: "GET",
-					  url: "/itl/item/getItem",
-					  dataType: "script"
-				}); */
-			</script>
-				
-				
 					<ul class="ul-xinxi form-group">
 						<li class="fl">
 							<p class="fs19">姓名：</p> <input id="name" type="text" name="#"
@@ -106,32 +108,27 @@
 							<p class="jinggao"></p>
 						</li>
 						<li class="fl cb">
-							<p class="fs19">专业班级：</p> <select id="zy" class="form-control" required>
+							<p class="fs19">专业班级：</p><select id="specialty" class="form-control" required>
 							
 								<option selected="selected" value="" disabled>---请选择---</option>
-								<option value="17级计算机科学与技术">17级计算机科学与技术</option>
-								<option value="17级网络工程">17级网络工程</option>
-								<option value="17级物联网工程">17级物联网工程</option>
-								<option value="17级软件工程">17级软件工程</option>
-								<option value="17级软件技术">17级软件技术</option>
-								<option value="17级计算机应用技术">17级计算机应用技术</option>
-								<option value="18级计科（专升本）">18级（专升本）</option>
+								<c:forEach items="${itemList}" var="list">
+									<option value="'+ ${list.specialty} } +'">${list.specialty}</option>
+								</c:forEach>
 						</select>
 							<p class="jinggao"></p>
 						</li>
 						<li class="fr">
-							<p class="fs19">想要加入的部门：</p> <select id="bm" class="form-control"
+							<p class="fs19">想要加入的部门：</p> <select id="department" class="form-control"
 							required>
 								<option selected="selected" value="" disabled>---请选择---</option>
 								<option value="前端部">前端部</option>
 								<option value="后端部">后端部</option>
 								<option value="设计部">设计部</option>
-								<option value="数据库部">数据库部</option>
 						</select>
 							<p class="jinggao"></p>
 						</li>
 						<li class="fl cb">
-							<p class="fs19">学号</p> <input id="xh" type="text" name="#" value=""
+							<p class="fs19">学号</p> <input id="snumber" type="text" name="#" value=""
 							class="form-control" />
 							<p class="jinggao"></p>
 						</li>
@@ -141,12 +138,12 @@
 							<p class="jinggao"></p>
 						</li>
 						<li class="fl cb">
-							<p class="fs19">专业技能</p> <textarea id="jn" class="form-control"
+							<p class="fs19">专业技能</p> <textarea id="skill" class="form-control"
 								required></textarea>
 							<p class="jinggao">500字以内</p>
 						</li>
 						<li class="fl cb">
-							<p class="fs19">自我能力描述</p> <textarea id="nl" class="form-control"
+							<p class="fs19">自我能力描述</p> <textarea id="describe" class="form-control"
 								required></textarea>
 							<p class="jinggao">500字以内</p>
 						</li>

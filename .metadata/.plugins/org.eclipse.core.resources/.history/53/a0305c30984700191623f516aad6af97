@@ -1,9 +1,0 @@
-package com.zpx.itl.service;
-
-import com.zpx.itl.pojo.Item;
-
-public interface ItemService {
-	
-	Item getItem();
-
-}

@@ -39,9 +39,7 @@ public class ItemController {
 	public String getItem(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
 		List<Item> items = (List<Item>) session.getAttribute("itemList");
-		
-		if(items != null) {
-			
+		if(items != null && !"".equals(items+"")) {
 			return "join";
 		}
 		List<Item> itemList = itemService.getItem();

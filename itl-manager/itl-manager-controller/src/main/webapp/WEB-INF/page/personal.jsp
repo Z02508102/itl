@@ -160,7 +160,7 @@ body {
 
 				</li>
 				<li class="fl cb">
-					<p class="fs19">自我能力描述：</p> <textarea class="textarea-data">${info.describe}</textarea>
+					<p class="fs19">自我能力描述：</p> <textarea class="textarea-data">${info.describes}</textarea>
 
 				</li>
 

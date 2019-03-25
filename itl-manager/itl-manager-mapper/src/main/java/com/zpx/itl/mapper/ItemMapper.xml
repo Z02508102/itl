@@ -3,13 +3,7 @@
 <mapper namespace="com.zpx.itl.mapper.ItemMapper" >
   <resultMap id="BaseResultMap" type="com.zpx.itl.pojo.Item" >
     <id column="id" property="id" jdbcType="VARCHAR" />
-    <!-- <result column="sex" property="sex" jdbcType="VARCHAR" /> -->
     <result column="specialty" property="specialty" jdbcType="VARCHAR" />
-    <!-- <result column="department" property="department" jdbcType="VARCHAR" /> -->
-   <!--  <result column="phone" property="phone" jdbcType="VARCHAR" />
-    <result column="email" property="email" jdbcType="VARCHAR" />
-    <result column="created" property="created" jdbcType="TIMESTAMP" />
-    <result column="updated" property="updated" jdbcType="TIMESTAMP" /> -->
   </resultMap>
   
   <select id="getItem" resultType="com.zpx.itl.pojo.Item">

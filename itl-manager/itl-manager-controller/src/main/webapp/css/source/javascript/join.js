@@ -1,13 +1,13 @@
 window.onload = function() {
 	var tijiao = document.getElementById("tijiao");
-	var name = document.getElementById("name");
-	var sex = document.getElementById("sex");
-	var zy = document.getElementById("zy");
-	var bm = document.getElementById("bm");
-	var xh = document.getElementById("xh");
+	var name = document.getElementById("snumber");
+	var sex = document.getElementById("name");
+	var zy = document.getElementById("sex");
+	var bm = document.getElementById("specialty");
+	var xh = document.getElementById("department");
 	var tel = document.getElementById("tel");
-	var jn = document.getElementById("jn");
-	var nl = document.getElementById("nl");
+	var jn = document.getElementById("skill");
+	var nl = document.getElementById("describe");
 	var name_length = 0;
 	var jinggao = document.getElementsByClassName('jinggao');
 
@@ -227,7 +227,7 @@ window.onload = function() {
 			}
 		};
 
-		request.open("POST", "/Laboratory/LaboratoryServlet", true);
+		request.open("POST", "/itl/info/add", true);
 		request.setRequestHeader("Content-Type",
 				"application/x-www-form-urlencoded");
 		request.send(urlshuju)

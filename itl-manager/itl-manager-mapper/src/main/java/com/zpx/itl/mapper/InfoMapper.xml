@@ -3,17 +3,35 @@
 <mapper namespace="com.zpx.itl.mapper.InfoMapper">
 	<resultMap id="BaseResultMap"
 		type="com.zpx.itl.pojo.Information">
+		<id column="snumber" property="snumber" jdbcType="VARCHAR" />
 		<id column="name" property="name" jdbcType="VARCHAR" />
 		<id column="sex" property="sex" jdbcType="VARCHAR" />
-		<id column="zy" property="zy" jdbcType="VARCHAR" />
-		<id column="bm" property="bm" jdbcType="VARCHAR" />
-		<id column="xh" property="xh" jdbcType="VARCHAR" />
+		<id column="specialty" property="specialty" jdbcType="VARCHAR" />
+		<id column="department" property="department" jdbcType="VARCHAR" />
 		<id column="tel" property="tel" jdbcType="VARCHAR" />
-		<id column="jn" property="jn" jdbcType="VARCHAR" />
-		<id column="nl" property="nl" jdbcType="VARCHAR" />
+		<id column="skill" property="skill" jdbcType="VARCHAR" />
+		<id column="describe" property="describe" jdbcType="VARCHAR" />
 		<id column="uid" property="uid" jdbcType="VARCHAR" />
 
 	</resultMap>
+	
+	<!-- 添加信息 -->
+	<insert id="addInfo" parameterType="com.zpx.itl.pojo.Information">
+		INSERT INTO itl_info ( snumber, NAME, sex, specialty, department, tel, skill, describes, uid )
+		VALUES
+			(
+			$ { snumber },
+			$ { NAME },
+			$ { sex },
+			$ { specialty },
+			$ { department },
+			$ { tel },
+			$ { skill },
+			$ { describes },
+			$ { uid } 
+			);
+	</insert>
+
 
 	<!-- 查询总记录数 -->
 	<select id="getTotal" resultType="int">

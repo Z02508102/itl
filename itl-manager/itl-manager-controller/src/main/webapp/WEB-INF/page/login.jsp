@@ -60,7 +60,7 @@
 					</div>
 				</form>
 				<div>
-					<a style="color: red"><%=session.getAttribute("error") == null ? "" : session.getAttribute("error")%></a>
+					<a style="color: red"><%=request.getAttribute("error") == null ? "" : request.getAttribute("error")%></a>
 				</div>
 				<%-- <div>
 					<a style="color: red"><%=request.getAttribute("alreadyLogged") == null ? "" : request.getAttribute("alreadyLogged")%></a>

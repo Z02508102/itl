@@ -52,10 +52,10 @@ public class UserLoginController {
 				//request.getRequestDispatcher("/item/infoList").forward(request, response);
 				//重定向
 				response.sendRedirect("/itl/info/infoList?currentPage=1");
-				//"/item/infoList";
-				//return "information";
+			}else {
+				request.setAttribute("error", "用户名或密码错误");
+				return "login";
 			}
-			session.setAttribute("error", "用户名或密码错误");
 			return "login";
 		}
 		return "login";

@@ -28,6 +28,13 @@ public class InfoController {
 	private InfoService infoService;
 	private PageBean<Information> pageBean;
 	
+	@RequestMapping("/itl/info/add")
+	public String addInfo() {
+		
+		
+		return "information";
+	}
+	
 	@RequestMapping("/info/infoList")
 	public String getItem(String currentPage, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		

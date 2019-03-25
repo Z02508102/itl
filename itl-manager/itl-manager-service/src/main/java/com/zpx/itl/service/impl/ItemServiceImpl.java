@@ -22,7 +22,9 @@ public class ItemServiceImpl implements ItemService {
 	
 	@Override
 	public List<Item> getItem() {
+		Item item = new Item();
 		List<Item> itemList = itemMapper.getItem();
+		
 		return itemList;
 	}
 

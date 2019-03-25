@@ -76,13 +76,6 @@
 				</ul>
 				<script type="text/javascript">
 				
-					/* function(){
-						$.ajax({
-							type : "POST",
-							url : "/itl/info/infoList",
-						});
-					}; */
-				
 					function logout() {
 						if (confirm("确定退出吗")) {
 							$.ajax({
@@ -157,8 +150,7 @@
 				<li><a style="color: black;">第${pageBean.currentPage}页</a>
 					&nbsp;<a style="color: black;">共${pageBean.totalPage}页</a></li>
 				<li><c:if test="${pageBean.currentPage > 1}">
-						<a
-							href="<c:url value='/info/infoList?currentPage=${pageBean.currentPage - 1}'/> ">上一页</a>
+						<a href="<c:url value='/info/infoList?currentPage=${pageBean.currentPage - 1}'/> ">上一页</a>
 					</c:if></li>
 				<li><a href="<c:url value='/info/infoList?currentPage=1'/> ">首页</a></li>
 
@@ -190,10 +182,16 @@
 							</c:otherwise>
 						</c:choose>
 					</c:forEach></li>
-				<li><c:if test="${pageBean.currentPage < pageBean.totalPage}">
-						<a
-							href="<c:url value='/info/infoList?currentPage=${pageBean.currentPage + 1}'/> ">下一页</a>
-					</c:if></li>
+				<li>
+					<c:if test="${pageBean.currentPage < pageBean.totalPage}">
+						<a href="<c:url value='/info/infoList?currentPage=${pageBean.currentPage + 1}'/> ">下一页</a>
+					</c:if>
+					<%-- <c:if test="${pageBean_like != null}">
+						<c:if test="${pageBean.currentPage < pageBean.totalPage}">
+							<a href="<c:url value='/info/infoList?currentPage=${pageBean.currentPage + 1}'/> ">下一页</a>
+						</c:if>
+					</c:if> --%>
+					</li>
 				<li><a
 					href="<c:url value='/info/infoList?currentPage=${pageBean.totalPage}'/> ">尾页</a></li>
 			</ul>
