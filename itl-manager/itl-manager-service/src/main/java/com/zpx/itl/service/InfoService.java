@@ -16,4 +16,7 @@ public interface InfoService {
 	
 	//根据姓名进行模糊查询
 	PageBean<Information> findByName(String sname, int pageSize, String currentPage);
+	
+	//根据uid删除数据
+	int deleteByUid(String uid);
 }

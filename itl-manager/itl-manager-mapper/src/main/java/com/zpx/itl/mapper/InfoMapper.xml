@@ -32,7 +32,6 @@
 			);
 	</insert>
 
-
 	<!-- 查询总记录数 -->
 	<select id="getTotal" resultType="int">
 		SELECT
@@ -52,7 +51,7 @@
 			LIMIT #{0}, #{1};
 	</select>
 	
-	<!-- 根据学号查询详细信息 -->
+	<!-- 根据uid查询详细信息 -->
 	<select id="findByUid" parameterType="java.lang.String" resultType="com.zpx.itl.pojo.Information" >
 		SELECT
 			* 
@@ -60,6 +59,16 @@
 			itl_info 
 		WHERE
 			uid = #{0};
+	</select>
+	
+	<!-- 根据uid查询详细信息 -->
+	<select id="findBySnumber" parameterType="java.lang.String" resultType="com.zpx.itl.pojo.Information" >
+		SELECT
+			* 
+		FROM
+			itl_info 
+		WHERE
+			snumber = #{0};
 	</select>
 	
 	<!-- 根据姓名进行模糊查询 -->
@@ -83,5 +92,16 @@
 		WHERE
 			NAME LIKE '%' '${sname}' '%';
 	</select>
+	
+	<!-- 根据uid删除数据 -->
+	<delete id="deleteByUid" parameterType="java.lang.String">
+		DELETE 
+		FROM
+			itl_info 
+		WHERE
+			uid = #{0};
+	</delete>
+	
+	
 
 </mapper>

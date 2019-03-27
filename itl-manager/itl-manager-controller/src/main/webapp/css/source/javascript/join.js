@@ -10,7 +10,7 @@ window.onload = function() {
 	var describes = document.getElementById("describes");
 	var name_length = 0;
 	var jinggao = document.getElementsByClassName('jinggao');
-
+	
 	function getLength(str) {
 		return str.length;
 	}
@@ -150,7 +150,7 @@ window.onload = function() {
 		} else if (name_length == 0) {
 			jinggao[5].innerHTML = '不能为空';
 		} else {
-			jinggao[5].innerHTML = '手机号输入错误';
+			jinggao[5].innerHTML = '手机号格式输入错误';
 		}
 
 	}

@@ -71,7 +71,7 @@
 					<li><a href="/itl/index">首页</a></li>
 					<li><a href="/itl/department">部门介绍</a></li>
 					<li><a href="/itl/about">关于我们</a></li>
-					<li><a href="/itl/join">加入我们</a></li>
+					<li><a href="/itl/item/getItem">加入我们</a></li>
 					<li><a href="" onclick="logout()">退出</a></li>
 				</ul>
 				<script type="text/javascript">
@@ -122,24 +122,24 @@
 					<td>专业</td>
 					<td>部门</td>
 					<td>联系方式</td>
-					<%-- <c:if
+					<c:if
 						test="${user.username == '2bdb74e826e370869325a791639b9920' }">
 						<td>操作</td>
-					</c:if> --%>
+					</c:if>
 				</tr>
 				<c:forEach items="${pageBean.beanlist}" var="list">
 					<tr>
 						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.snumber}</a></td>
 						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.name}</a></td>
-						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.sex}</a></td>
+						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">&nbsp;&nbsp;${list.sex}&nbsp;&nbsp;</a></td>
 						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.specialty}</a></td>
 						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.department}</a></td>
 						<td><a href="<c:url value='/info/findByUid?uid=${list.uid}'/>">${list.tel}</a></td>
-						<%-- <c:if
+						<c:if
 							test="${user.username == '2bdb74e826e370869325a791639b9920' }">
 							<td><a class="red"
-								href="<c:url value='/FindByUid?method=delete&uid=${list.uid}'/>">删除</a></td>
-						</c:if> --%>
+								href="<c:url value='/info/deleteByUid?uid=${list.uid}'/>">&nbsp;&nbsp;删除&nbsp;&nbsp;</a></td>
+						</c:if>
 					</tr>
 				</c:forEach>
 			</table>

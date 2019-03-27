@@ -22,6 +22,10 @@ public class InfoServiceImpl implements InfoService {
 	//添加信息
 	public int addInfo(Information information) {
 		
+		Information info = infoMapper.findBySnumber(information.getSnumber());
+		if(info != null && !"".equals(info + "")) {
+			return 1;
+		}
 		return infoMapper.addInfo(information);
 		
 	}
@@ -87,5 +91,13 @@ public class InfoServiceImpl implements InfoService {
 		pageBean.setBeanlist(info);
 		return pageBean;
 	}
+
+	//根据uid删除数据
+	public int deleteByUid(String uid) {
+		
+		return infoMapper.deleteByUid(uid);
+	}
+	
+	
 
 }

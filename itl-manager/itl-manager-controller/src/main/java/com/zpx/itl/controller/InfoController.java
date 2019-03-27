@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -34,19 +35,21 @@ public class InfoController {
 	
 	@RequestMapping("/info/add")
 	@ResponseBody
-	public void addInfo(Information information, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String addInfo(Information information, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		request.setCharacterEncoding("utf-8");
 		
 		if(information != null && !"".equals(information + "")) {
 			information.setUid(UUID.randomUUID().toString().replace("-", ""));
 			int i = infoService.addInfo(information);
-			if(i != 0) {
-				response.getWriter().print("注册信息成功！");
-				//return "join";
+			if(i == 1) {
+				
+				return "提交失败，该学号已提交信息！";
+			}else {
+				return "提交信息成功！";
 			}
-		}else {
-			response.getWriter().print("注册信息失败！");
 		}
-		//return "join";
+		return "提交信息失败，请重新填写！";
 		
 	}
 	
@@ -56,8 +59,6 @@ public class InfoController {
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
 		if(user != null && !"".equals(user + "")) {
-			//request.setCharacterEncoding("utf-8");
-			//response.setContentType("text/html;charset=utf-8");
 			
 			PageBean pageBean;
 			//当前页
@@ -101,4 +102,13 @@ public class InfoController {
 		return "information";
 	}
 	
+	@RequestMapping("/info/deleteByUid")
+	public void deleteByUid(String uid, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		infoService.deleteByUid(uid);
+				
+		request.getRequestDispatcher("/info/infoList?currentPage=1").forward(request, response);
+		
+		
+	}
 }

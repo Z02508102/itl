@@ -28,24 +28,26 @@
 	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	  <![endif]-->
-</head>
 <script src="${pageContext.request.contextPath}/js/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	$(function (){
+		 $.ajax({
+			type : "GET",
+			url : "/itl/item/getItem",
+		});
+	});
+</script>
+
+</head>
+
 <body>
 	<div class="huidaodingbu">
 		<a href="#"><img
 			src="${pageContext.request.contextPath }/css/public/images/0.1.png" /></a>
 	</div>
 	
-	<script type="text/javascript">
 	
-		$(function (){
-			 $.ajax({
-				type : "POST",
-				url : "/itl/item/getItem",
-			});
-		});
-	
-	</script>
 	<div class="header">
 		<nav class="navbar navbar-default beijing ">
 			<div class="container-fluid">

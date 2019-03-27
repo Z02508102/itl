@@ -26,6 +26,7 @@
 	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	  <![endif]-->
+	  
 </head>
 
 
@@ -44,7 +45,7 @@
 					<li><a href="/itl/index">首页</a></li>
 					<li><a href="/itl/department">部门介绍</a></li>
 					<li><a href="/itl/about">关于我们</a></li>
-					<li><a href="/itl/join">加入我们</a></li>
+					<li><a href="/itl/item/getItem">加入我们</a></li>
 					<li><a href="/itl/user/login">后台管理</a></li>
 				</ul>
 			</div><!--  -->

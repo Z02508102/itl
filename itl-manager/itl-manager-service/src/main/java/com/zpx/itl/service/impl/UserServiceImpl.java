@@ -17,9 +17,10 @@ public class UserServiceImpl implements UserService {
 	
 	public User userLogin(String username, String password) {
 		
+		String uname = DigestUtils.md5DigestAsHex(username.getBytes());
 		String pwd = username + password;
 		String pwdMd5 = DigestUtils.md5DigestAsHex(pwd.getBytes());
-		User user = userMapper.userLogin(username, pwdMd5);
+		User user = userMapper.userLogin(uname, pwdMd5);
 		return user;
 	}
 
