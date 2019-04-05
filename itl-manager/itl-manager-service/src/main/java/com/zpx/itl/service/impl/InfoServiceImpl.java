@@ -1,6 +1,7 @@
 package com.zpx.itl.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import com.zpx.itl.pojo.Information;
 import com.zpx.itl.pojo.PageBean;
 import com.zpx.itl.pojo.Param;
 import com.zpx.itl.service.InfoService;
+import com.zpx.itl.utils.InformationException;
 
 
 @Service
@@ -20,14 +22,16 @@ public class InfoServiceImpl implements InfoService {
 	private Param param = new Param();
 	
 	//添加信息
-	public int addInfo(Information information) {
+	public void addInfo(Information information, Map<String, String> errors) throws InformationException {
 		
 		Information info = infoMapper.findBySnumber(information.getSnumber());
 		if(info != null && !"".equals(info + "")) {
-			return 1;
+			throw new InformationException("提交失败,您已经提交过了表单！");
 		}
-		return infoMapper.addInfo(information);
-		
+		if(errors.size() > 0) {
+			throw new InformationException("提交失败,请校正注册信息！");
+		}
+		infoMapper.addInfo(information);
 	}
 	
 	//查询所有数据

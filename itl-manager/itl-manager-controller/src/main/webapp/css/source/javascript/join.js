@@ -216,7 +216,7 @@ window.onload = function() {
 						|| request.status == 304) {
 					if (request.responseText == "注册信息成功！") {
 						alert(request.responseText);
-						document.location = 'index.jsp';
+						document.location = '/itl/index';
 					} else {
 						alert(request.responseText);
 					}
